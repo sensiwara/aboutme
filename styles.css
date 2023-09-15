@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 300vh; /* Устанавливаем высоту страницы в 3 раза выше экрана */
+    background-size: 600% 100%; /* Двойная ширина для градиента */
+    /* background-image: linear-gradient(to right, #260eff, #228de6, #871ffd, #403ed8, #43dee9, #072b91); */
+    background-image: linear-gradient(to right, #000000, #ffffff);
+    animation: gradient 7s ease infinite;
+    font-family: 'MyCustomFont', Arial, sans-serif;
+    cursor: url(assets/cursor.png), default;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent; /* Убираем фон секций */
+}
+
+
+
+.centered-image {
+    display: block;
+    margin: 20px auto; /* Отступы сверху и снизу 20px, горизонтально по центру */
+    max-width: 100%; /* Ограничиваем максимальную ширину картинки */
+    position: absolute; /* Абсолютное позиционирование */
+    bottom: 20px; /* Отступ снизу */
+    left: 50%; /* Положение по горизонтали по центру */
+    transform: translateX(-50%); /* Центрирование по горизонтали */
+}
+
+
+
+#section2 .card {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#section2 h2 {
+    font-size: 50px; /* Размер заголовка */
+    margin: 30px 0; /* Внешние отступы сверху и снизу */
+}
+
+#section2 .columns {
+    display: flex;
+    justify-content: center;
+}
+
+#section2 .column {
+    flex: 1;
+    padding: 10px;
+}
+
+.wave {
+    position: relative;
+}
+
+.wave span {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-size: 2em;
+    text-transform: uppercase;
+    animation: animate 2s ease-in-out infinite;
+    animation-delay: calc(.1s*var(--i));
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0px);
+    }
+
+    20% {
+        transform: translateY(-20px);
+    }
+
+    40%,
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+#section1 {
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+#section1 p {
+    max-width: 1000px;
+    margin: 0; /* Убираем внешние отступы у абзацев */
+    font-size: 50px; /* Размер шрифта */
+    color: white; /* Цвет текста */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень текста */
+    padding: 30px; /* Внутренние отступы */
+    background: rgba(0, 0, 0, 0.5); /* Фон текста с прозрачностью */
+    border-radius: 20px; /* Закругление углов */
+
+}
+
+
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('fonts/myfont.ttf') format('truetype');
+}
+
+
+#target {
+    white-space:pre;
+    display:inline-block;
+  }
+  #target span {
+    position:relative;
+    display:inline-block;
+    transform-origin:left;
+  }
